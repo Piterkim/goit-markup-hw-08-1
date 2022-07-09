@@ -1,0 +1,23 @@
+.main-nav__logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.main-nav__logo-studio {
+  color: #000000;
+}
+
+.main-nav__logo-web {
+  color: $accent-color;
+}
+.footer__logo-web {
+  color: $accent-color;
+}
+.footer__logo-studiow {
+  color: #ffffff;
+  text-decoration: none;
+}

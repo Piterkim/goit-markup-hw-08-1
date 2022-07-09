@@ -1,0 +1,216 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+
+  transition: opacity 250ms $timing, visibility 250ms $timing;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms $timing;
+  display: block;
+  opacity: 1;
+
+  flex-direction: column;
+  align-items: center;
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  background: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal__form-titel {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $primary-white-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  border-radius: 15px;
+  padding: 6px;
+}
+
+.modal__button-close:hover,
+.modal__button-close:focus {
+  fill: $accent-color;
+}
+
+.modal__button-modal {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.modal__svg {
+  padding: 0;
+  height: 16px;
+}
+
+.modal__form {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+
+.modal__form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+
+  transition: border-color 250ms $timing;
+}
+
+.modal__form-field:focus-within .modal__form-input,
+.modal__form-field:hover .modal__form-input {
+  border: 1px solid $accent-color;
+}
+
+.modal__form-field:focus-within .modal__form-input,
+.modal__form-field:hover .form-input {
+  border: 1px solid $accent-color;
+  outline: none;
+}
+
+.modal__form-field:focus-within .modal__subscribe-form-div,
+.modal__form-field:hover .modal__subscribe-form-div {
+  fill: $accent-color;
+}
+
+.modal__form-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal__form-input {
+  height: 40px;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms $timing;
+}
+
+.modal__form-textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal__subscribe-form-div {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  fill: $title-text-color;
+  transition: fill 250ms $timing;
+}
+
+.modal__textarea-field {
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms $timing;
+  resize: none;
+}
+
+.modal__form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #75757580;
+}
+
+.modal__textarea-field:focus-within,
+.modal__textarea-field:hover {
+  border-color: $accent-color;
+  outline: none;
+}
+
+.modal__form-checkbox {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.modal__checkbox-icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  border: 2px solid $title-text-color;
+  border-radius: 2px;
+  transition: background-image 250ms $timing;
+}
+
+.modal__form-checkbox-title {
+  margin-left: 7px;
+}
+
+.modal__link {
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: #2196f3;
+}
+
+.modal__input-checkbox:checked + .modal__checkbox-icon {
+  background-color: #2196f3;
+  background-image: url(../Images/iconcheck.svg);
+  background-size: contain;
+  border-color: transparent;
+  background-origin: border-box;
+}

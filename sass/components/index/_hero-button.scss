@@ -1,0 +1,40 @@
+.hero__button {
+  border-radius: 4px;
+  padding: 10px 32px;
+
+  cursor: pointer;
+  color: $title-text-color;
+  background-color: $button-bg-color;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  transition: background-color 250ms $timing, color 250ms $timing;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    border: none;
+  }
+}
+
+.hero__button.hero__primary {
+  color: $primary-white-color;
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: none;
+}
+
+.hero__button.hero__primary:hover,
+.hero__button.hero__primary:focus {
+  background-color: $hover-bg-prbutton;
+  color: $primary-white-color;
+  border: none;
+}

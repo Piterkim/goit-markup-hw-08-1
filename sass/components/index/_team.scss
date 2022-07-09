@@ -1,0 +1,84 @@
+.bg-section-command {
+  background-color: #f5f4fa;
+}
+
+.team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team__command {
+  display: flex;
+}
+
+.team__team {
+  margin-bottom: 10px;
+}
+
+.section .team__team {
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.team__command .team__itemcomand + .team__itemcomand {
+  margin-left: 30px;
+}
+
+.team__dcommand {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__itemcomand {
+  text-align: center;
+
+  background-color: $primary-white-color;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.team__command-svg {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.team__command-li {
+  margin-right: 10px;
+}
+
+.team__command-li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team__button-svg {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+
+  fill: #afb1b8;
+
+  transition: background-color 250ms $timing, fill 250ms $timing;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: #ffffff;
+  }
+}
